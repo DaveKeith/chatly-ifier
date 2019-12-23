@@ -1,0 +1,102 @@
+.messages {
+    width: 90%;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.message {
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+    
+    img{
+        border-radius: 50%;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    &--textbox{
+        display: grid;
+        grid-row-gap: 1rem;
+        grid-template-columns: max-content 1fr;
+        background-color: $bg-grey;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        width: calc(100% - 10rem);
+        position: relative;
+
+        &__arrow{
+            width: 1rem;
+            height: 1rem;
+        }
+
+        &__content {
+            grid-column: span 2;
+        }
+
+        &__user {
+            display: inline;
+            font-weight: 600;
+            margin-right: 4rem;
+        }
+
+        &__time {
+            display: inline-flex;
+            align-items: end;
+
+            img {
+                height: 1.6rem;
+                width: 1.6rem;
+                margin-right: 0.5rem;
+                align-self: center;
+            }
+        }
+    }
+}
+
+.arrow-left, .arrow-right {
+    position: absolute;
+    top: 1.5rem;
+    border-bottom: 1rem solid transparent;
+    border-top: 1rem solid transparent;
+}
+
+.arrow-left {
+    left: -1rem;
+    border-right: 1rem solid $bg-grey;
+}
+
+.arrow-right {
+    right: -1rem;
+    border-left: 1rem solid $bg-grey;
+}
+
+.left {
+    &--user{
+        color: red;
+    }
+}
+
+.right {
+    flex-direction: row-reverse;
+
+    &--user{
+        color: dodgerblue;
+    }
+}
+
+.focused {
+    background-color: white;
+    box-shadow: 0 0 2rem $shadow-grey;
+
+    .arrow-left{
+        border-right: 1rem solid white;
+    }
+
+    .arrow-right{
+        border-left: 1rem solid white;
+    }
+}

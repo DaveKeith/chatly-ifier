@@ -1,0 +1,61 @@
+$font-primary: 'Nunito', sans-serif;
+
+$bg-grey: #eee;
+$shadow-grey: #bbb;
+$text-message-grey: #555;
+
+$bg-white: #fdfdfd;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: $font-primary;
+    color: $text-message-grey;
+    line-height: 1.6;
+    background-color: $bg-grey;
+    
+    @media only screen and (max-width: $bp-medium) {
+        background-color: $bg-white;
+    }
+}
+
+.container {
+    margin: 10rem auto;
+    background-color: $bg-white;
+    max-width: $bp-large;
+    box-shadow: 0 0 2rem $shadow-grey;
+    font-size: 1.6rem;
+    transition: all .5s;
+
+    @media only screen and (max-width: $bp-large) {
+        margin: 5rem auto;
+        max-width: $bp-medium;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        margin: 0 auto;
+        box-shadow: none;
+        transition: all 2s;
+    }
+}
