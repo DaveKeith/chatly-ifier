@@ -14,3 +14,4 @@ It utilizes:
   - Vanilla JS as I beleive was the requirement
   - Involves modular reusable code as requested
 - Uses an asynchronous network request to retreive the API data (no library/framework/npm needed)
+- Also utilized clock-regular.svg from Font Awesome as it appears on the example
